@@ -1,3 +1,3 @@
 # github-actions-codecov-nodejs-test
 [![Build Status](https://github.com/yudhatamaaditiyara/github-actions-codecov-nodejs-test/workflows/ci/badge.svg?branch=master)](https://github.com/yudhatamaaditiyara/github-actions-codecov-nodejs-test/actions)
-[![codecov](https://codecov.io/gh/yudhatamaaditiyara/github-actions-codecov-nodejs-test/branch/main/graph/badge.svg?token=H0TDF4ZN2C)](https://codecov.io/gh/yudhatamaaditiyara/github-actions-codecov-nodejs-test)
+[![codecov](https://codecov.io/gh/yudhatamaaditiyara/github-actions-codecov-nodejs-test/branch/master/graph/badge.svg?token=H0TDF4ZN2C)](https://codecov.io/gh/yudhatamaaditiyara/github-actions-codecov-nodejs-test)
