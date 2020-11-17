@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yudhatamaaditiyara/github-actions-nodejs-test.git"
+    "url": "git+https://github.com/yudhatamaaditiyara/github-actions-codecov-nodejs-test.git"
   },
   "devDependencies": {
     "jest": "^26.4.0"

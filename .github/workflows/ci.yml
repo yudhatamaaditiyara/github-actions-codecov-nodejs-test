@@ -32,3 +32,35 @@ jobs:
 
       - run: npm install
       - run: npm run test
+
+  coverage:
+    name: coverage
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+    
+      - name: Get npm cache directory
+        id: npmcachedir
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{steps.npmcachedir.outputs.dir}}
+          key: ${{runner.os}}-npm-${{hashFiles('**/package.json')}}
+          restore-keys: ${{runner.os}}-npm-
+
+      - run: npm install
+      - run: npm run coverage
+
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v1
+        with:
+          name: coverage
+          flags: unittests
+          token: ${{secrets.CODECOV_TOKEN}}
+          file: ./build/coverage/clover.xml
+          path_to_write_report: ./build/coverage/clover.gz
+          fail_ci_if_error: true
