@@ -66,6 +66,7 @@ jobs:
           name: coverage
           flags: unittests
           token: ${{secrets.CODECOV_TOKEN}}
-          file: ./build/coverage/clover.xml
-          path_to_write_report: ./build/coverage/clover.gz
+          file: ./build/coverage/coverage-json.json
+          path_to_write_report: ./build/coverage/coverage-json.gz
           fail_ci_if_error: true
+          verbose: true
